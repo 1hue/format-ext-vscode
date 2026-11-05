@@ -1,4 +1,4 @@
-# FormatExt
+# FormatExt for VS Code
 
 Format any file with a command that reads stdin and writes stdout. Works with Format Document and `editor.formatOnSave`.
 
