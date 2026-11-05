@@ -18,8 +18,17 @@ Also recommended:
 }
 ```
 
-Ensure `editor.defaultFormatter` is set to `1hue.format-ext`.
+&nbsp;
 
-Formatting is off in Restricted Mode.
+---
 
-For logs and errors check the VS Code's Output panel (FormatExt).
+&nbsp;
+
+- Ensure `editor.defaultFormatter` is set to `1hue.format-ext`.
+
+- Formatting is off in Restricted Mode.
+
+- For logs and errors check the VS Code's Output panel (FormatExt).
+
+- Works well with containerised [1hue/devtools](https://github.com/1hue/devtools).
+
