@@ -1,10 +1,14 @@
 {
 	"name": "format-ext",
-	"displayName": "Format Ext",
+	"displayName": "FormatExt",
 	"description": "Format any language with a command that reads stdin and writes stdout, like clang-format.",
 	"version": "0.1.0",
 	"publisher": "1hue",
 	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/1hue/format-ext-vscode"
+	},
 	"engines": {
 		"vscode": "^1.82.0"
 	},
@@ -18,46 +22,28 @@
 	"capabilities": {
 		"untrustedWorkspaces": {
 			"supported": "limited",
-			"description": "Workspace formatters are ignored in Restricted Mode.",
-			"restrictedConfigurations": [
-				"formatExt.formatters"
-			]
+			"description": "Formatting is off in Restricted Mode."
 		}
 	},
 	"contributes": {
 		"configuration": {
-			"title": "Format Ext",
+			"title": "FormatExt",
 			"properties": {
 				"formatExt.formatters": {
-					"type": "array",
-					"default": [],
-					"markdownDescription": "Commands that read the document on stdin and write the result to stdout. Run in the file's directory.",
-					"items": {
-						"type": "object",
-						"required": [
-							"command",
-							"languages"
-						],
-						"properties": {
-							"command": {
-								"type": "string",
-								"markdownDescription": "Executable like `clang-format`"
-							},
-							"args": {
-								"type": "array",
-								"items": {
-									"type": "string"
-								},
-								"markdownDescription": "Arguments. `${file}` is replaced with the document path"
-							},
-							"languages": {
-								"type": "array",
-								"items": {
-									"type": "string"
-								},
-								"markdownDescription": "Language IDs like `glsl`"
-							}
-						}
+					"markdownDescription": "Commands or paths that read stdin and write stdout, mapped to the target file endings.\n\n`${file}` is replaced with the filepath.\n\nFor example: `\"prettier --stdin-filepath ${file}\": \".js,.ts\"`",
+					"type": "object",
+					"default": {
+						"clang-format --assume-filename=${file}": ".c,.h,.cc,.cp,.cpp,.cxx,.c++,.hh,.hpp,.hxx,.h++,.ipp,.inl,.tpp,.ixx,.cppm,.ccm,.cxxm,.c++m,.m,.mm,.cu,.cuh,.glsl,.vert,.frag,.geom,.comp,.tesc,.tese,.hlsl,.hlsli,.metal,.gdshader,.gdshaderinc,.java,.cs,.proto,.protodevel,.td,.textproto,.textpb,.txtpb,.asciipb,.sv,.svh,.vh",
+						"prettier --stdin-filepath ${file}": ".js,.cjs,.mjs,.jsx,.ts,.cts,.mts,.tsx,.json,.jsonc,.json5,.css,.scss,.less,.html,.htm,.vue,.md,.markdown,.mdx,.yaml,.yml,.graphql,.gql,.hbs,.handlebars"
+					},
+					"propertyNames": {
+						"pattern": "\\$\\{file\\}",
+						"patternErrorMessage": "Pass the file path as ${file}"
+					},
+					"additionalProperties": {
+						"type": "string",
+						"pattern": "^([^\\s,]+(,\\s*[^\\s,]+)*)?$",
+						"patternErrorMessage": "Comma-separated file endings like .c,.h"
 					}
 				}
 			}
@@ -76,7 +62,7 @@
 		"typescript": "^7.0.2"
 	},
 	"overrides": {
-		"@azure/msal-node": "^7.1.1",
+		"@azure/msal-node": "^7.2.0",
 		"minimatch": "^11.0.4"
 	}
 }

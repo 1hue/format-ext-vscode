@@ -28,12 +28,13 @@ format: node_modules/.package-lock.json
 
 # Fix vulnerable deps
 audit: node_modules/.package-lock.json
-	$(RUN) $(NODE) sh -c 'npm audit fix && npm audit --audit-level=moderate'
+	$(RUN) $(NODE) npm audit fix --audit-level=moderate
 
 # Update image, install deps and audit
 setup:
 	podman pull $(NODE_IMAGE)
-	$(RUN) $(NODE) sh -c 'npm ci && npm audit --audit-level=moderate'
+	$(RUN) $(NODE) npm ci
+	$(RUN) $(NODE) npm audit --audit-level=moderate
 
 # Install deps when lockfile changes
 node_modules/.package-lock.json: package-lock.json

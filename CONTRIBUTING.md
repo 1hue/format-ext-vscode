@@ -1,6 +1,6 @@
 # Development
 
-Needs podman only. `make` runs on your machine, while all actual work happens inside a node container.
+Needs podman only. `make` runs on host machine, actual work happens inside a container (node).
 
 ```sh
 make setup # then F5 in VS Code
