@@ -11,7 +11,7 @@
 	"license": "MIT",
 	"icon": "assets/icon.png",
 	"galleryBanner": {
-		"color": "#41F3B9",
+		"color": "#13141C",
 		"theme": "dark"
 	},
 	"repository": {

@@ -1,6 +1,6 @@
 # FormatExt for VS Code
 
-Any custom formatter for any filetype. Lean.
+Point to your custom formatter without installing a bunch of VS Code extensions. Lean.
 
 Set your paths and target extensions in Settings.
 
