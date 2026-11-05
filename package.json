@@ -1,0 +1,82 @@
+{
+	"name": "format-ext",
+	"displayName": "Format Ext",
+	"description": "Format any language with a command that reads stdin and writes stdout, like clang-format.",
+	"version": "0.1.0",
+	"publisher": "1hue",
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.82.0"
+	},
+	"categories": [
+		"Formatters"
+	],
+	"main": "./out/extension.js",
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"capabilities": {
+		"untrustedWorkspaces": {
+			"supported": "limited",
+			"description": "Workspace formatters are ignored in Restricted Mode.",
+			"restrictedConfigurations": [
+				"formatExt.formatters"
+			]
+		}
+	},
+	"contributes": {
+		"configuration": {
+			"title": "Format Ext",
+			"properties": {
+				"formatExt.formatters": {
+					"type": "array",
+					"default": [],
+					"markdownDescription": "Commands that read the document on stdin and write the result to stdout. Run in the file's directory.",
+					"items": {
+						"type": "object",
+						"required": [
+							"command",
+							"languages"
+						],
+						"properties": {
+							"command": {
+								"type": "string",
+								"markdownDescription": "Executable like `clang-format`"
+							},
+							"args": {
+								"type": "array",
+								"items": {
+									"type": "string"
+								},
+								"markdownDescription": "Arguments. `${file}` is replaced with the document path"
+							},
+							"languages": {
+								"type": "array",
+								"items": {
+									"type": "string"
+								},
+								"markdownDescription": "Language IDs like `glsl`"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"scripts": {
+		"compile": "tsc -p .",
+		"prepackage": "npm audit --audit-level=moderate && npm run compile",
+		"package": "mkdir -p build && vsce package --out build/"
+	},
+	"devDependencies": {
+		"@types/node": "^26.6.5",
+		"@types/vscode": "~1.82.0",
+		"@vscode/vsce": "^4.1.0",
+		"prettier": "3.9.10",
+		"typescript": "^7.0.2"
+	},
+	"overrides": {
+		"@azure/msal-node": "^7.1.1",
+		"minimatch": "^11.0.4"
+	}
+}

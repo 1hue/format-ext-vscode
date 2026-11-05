@@ -1,0 +1,12 @@
+.*
+.*/**
+*.vsix
+build/**
+scripts/**
+src/**
+out/**/*.map
+node_modules/**
+tsconfig.json
+package-lock.json
+CONTRIBUTING.md
+Makefile
