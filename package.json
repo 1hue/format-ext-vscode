@@ -1,7 +1,7 @@
 {
 	"name": "format-ext",
 	"displayName": "FormatExt",
-	"description": "Format any language with a command that reads stdin and writes stdout, like clang-format.",
+	"description": "Custom formatter support like prettier or clang-format.",
 	"version": "0.1.0",
 	"publisher": "1hue",
 	"license": "MIT",
