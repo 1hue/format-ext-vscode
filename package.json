@@ -1,7 +1,7 @@
 {
 	"name": "format-ext",
 	"displayName": "FormatExt",
-	"description": "Custom formatter support like prettier or clang-format.",
+	"description": "Custom formatter support. Use prettier, clang-format or whatever else you have in your PATH without their VS Code extensions.",
 	"version": "0.1.0",
 	"publisher": "1hue",
 	"author": {
