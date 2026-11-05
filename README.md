@@ -18,11 +18,7 @@ Also recommended:
 }
 ```
 
-&nbsp;
-
----
-
-&nbsp;
+## Side Notes
 
 - Ensure `editor.defaultFormatter` is set to `1hue.format-ext`.
 
