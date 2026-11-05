@@ -4,8 +4,16 @@
 	"description": "Custom formatter support like prettier or clang-format.",
 	"version": "0.1.0",
 	"publisher": "1hue",
+	"author": {
+		"name": "1hue",
+		"url": "https://1hue.dev"
+	},
 	"license": "MIT",
 	"icon": "assets/icon.png",
+	"galleryBanner": {
+		"color": "#41F3B9",
+		"theme": "dark"
+	},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/1hue/format-ext-vscode"
