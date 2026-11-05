@@ -24,6 +24,18 @@
 	"categories": [
 		"Formatters"
 	],
+	"keywords": [
+		"formatter",
+		"format",
+		"formatting",
+		"beautify",
+		"clang-format",
+		"prettier",
+		"custom",
+		"local",
+		"cli",
+		"stdin"
+	],
 	"main": "./out/extension.js",
 	"activationEvents": [
 		"onStartupFinished"
