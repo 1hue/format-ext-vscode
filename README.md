@@ -1,8 +1,12 @@
 # FormatExt for VS Code
 
-Point to your custom formatter without installing a bunch of VS Code extensions. Lean.
+Point to your custom formatter without installing a bunch of VS Code extensions.
 
 Set your paths and target extensions in Settings.
+
+![Custom formatters VS Code Settings screen](assets/screenshot.png)
+
+Settings (JSON):
 
 ```json
 "formatExt.formatters": {
@@ -13,9 +17,7 @@ Set your paths and target extensions in Settings.
 Also recommended:
 
 ```json
-{
   "editor.formatOnSave": true
-}
 ```
 
 ## Side Notes
