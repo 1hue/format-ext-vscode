@@ -78,8 +78,8 @@
 	"devDependencies": {
 		"@types/node": "^26.6.5",
 		"@types/vscode": "~1.82.0",
-		"@vscode/vsce": "^4.1.0",
-		"prettier": "3.9.10",
+		"@vscode/vsce": "^4.1.1",
+		"prettier": "3.10.1",
 		"typescript": "^7.0.2"
 	},
 	"overrides": {
