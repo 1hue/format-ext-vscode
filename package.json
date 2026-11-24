@@ -1,7 +1,7 @@
 {
 	"name": "format-ext",
 	"displayName": "FormatExt",
-	"description": "Custom formatter support. Use prettier, clang-format or whatever else you have in your PATH without extra extensions.",
+	"description": "Custom formatter support. Use prettier, clang-format or whatever you have in PATH without extra extensions.",
 	"version": "0.1.0",
 	"publisher": "1hue",
 	"author": {
@@ -78,8 +78,8 @@
 	"devDependencies": {
 		"@types/node": "^26.6.5",
 		"@types/vscode": "~1.82.0",
-		"@vscode/vsce": "^4.1.1",
-		"prettier": "3.10.1",
+		"@vscode/vsce": "^4.1.0",
+		"prettier": "3.9.10",
 		"typescript": "^7.0.2"
 	},
 	"overrides": {
