@@ -1,8 +1,8 @@
 # FormatExt for VS Code
 
-Point to your custom formatter without installing a bunch of VS Code extensions.
+Point to your custom formatters without installing extra VS Code extensions.
 
-Set your paths and target extensions in Settings.
+Straightforward config via a list in Settings:
 
 ![Custom formatters VS Code Settings screen](assets/screenshot.png)
 
